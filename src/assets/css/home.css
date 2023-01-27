@@ -1,0 +1,57 @@
+.__home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.__navbar {
+    min-width: 250px;
+    width: 15vw;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.__nlogocontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.__nlogo {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.__nlinkcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.__nlink {
+    font-weight: 300;
+}
+
+.__nsocialcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.__nsocial {
+    margin: 0 15px
+}
+
+.__content {
+    width: 80vw;
+    background-color: #f3f3f3;
+}
