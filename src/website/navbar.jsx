@@ -1,21 +1,46 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import useWindow from "../custom/useWindow";
+import mePhoto from "../assets/img/me.jpg";
 
 const Navbar = () => {
+  const { width } = useWindow();
   return (
     <>
       <div className="__navbar">
         <div className="__nlogocontainer">
           <div className="__nlogo">
-            <div className="w-100" style={{ height: "50px" }}></div>
+            {/* <div className="w-100" style={{ height: "50px" }}></div> */}
+            <Link
+              className=""
+              to="/"
+              style={{
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "initial",
+              }}
+            >
+              <div
+                className="__nlogoimg"
+                style={{
+                  background: `url(${mePhoto}) center center / cover`,
+                  position: "relative",
+                }}
+              ></div>
 
-            <div className="__nlogoimg"></div>
-            <p>
-              <b>TJIPTO STEVEN SENJAYA </b>
-              <br />
-              <small>Graphic Designer & Front-End Developer</small>
-            </p>
-            <p></p>
-            <div className="w-100" style={{ height: "50px" }}></div>
+              <div className="w-100" style={{ padding: "15px" }}>
+                {width > 450 ? (
+                  <p>
+                    <b>TJIPTO STEVEN SENJAYA </b>
+                    <br />
+                    <small>Graphic Designer & Front-End Developer</small>
+                  </p>
+                ) : (
+                  ""
+                )}
+              </div>
+            </Link>
+            {/* <div className="w-100" style={{ height: "50px" }}></div> */}
           </div>
           {/* <div
             style={{
@@ -37,25 +62,29 @@ const Navbar = () => {
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
-              <i className="bi bi-house"></i> HOME
+              <i className="bi bi-house"></i>
+              {width > 450 ? " HOME" : ""}
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
-              <i className="bi bi-person"></i> ABOUT
+              <i className="bi bi-person"></i>
+              {width > 450 ? " ABOUT" : ""}
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
-              <i className="bi bi-code-square"></i> WORK
+              <i className="bi bi-code-square"></i>
+              {width > 450 ? " WORK" : ""}
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
-              <i className="bi bi-chat-square-text"></i> CONTACT
+              <i className="bi bi-chat-square-text"></i>
+              {width > 450 ? " CONTACT" : ""}
             </div>
           </div>
           <hr />
@@ -76,8 +105,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="w-100" style={{ height: "25px" }}>
-          <small>&copy; copyright 2022, TJIP DEV WORK</small>
+        <div
+          className="w-100"
+          style={{ height: "25px", textAlign: "center", fontSize: "12px" }}
+        >
+          {width > 450 ? (
+            <small>&copy; copyright 2022, TJIP DEV WORK</small>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>
