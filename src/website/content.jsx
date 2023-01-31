@@ -1,9 +1,11 @@
 import React from "react";
 
-const Content = () => {
+const Content = (props) => {
   return (
     <>
-      <div className="__content">content</div>
+      <div className="__content">
+        {props.mouse.x},{props.mouse.y}
+      </div>
     </>
   );
 };
