@@ -31,9 +31,9 @@ const Navbar = () => {
               <div className="w-100" style={{ padding: "15px" }}>
                 {width > 450 ? (
                   <p>
-                    <b>TJIPTO STEVEN SENJAYA </b>
+                    <b>TJIPTO</b> <b>STEVEN SENJAYA</b>
                     <br />
-                    <small>Graphic Designer & Front-End Developer</small>
+                    <small>Web Developer & UI/UX Designer</small>
                   </p>
                 ) : (
                   ""
