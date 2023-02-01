@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import useWindow from "../custom/useWindow";
 import mePhoto from "../assets/img/me.jpg";
