@@ -3,6 +3,7 @@ import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import useWindow from "../custom/useWindow";
 import mePhoto from "../assets/img/me.jpg";
+import logo from "../assets/img/logo512.png";
 
 const Navbar = () => {
   const { width } = useWindow();
@@ -21,42 +22,39 @@ const Navbar = () => {
                 color: "initial",
               }}
             >
-              <div
-                className="__nlogoimg"
-                style={{
-                  background: `url(${mePhoto}) center center / cover`,
-                  position: "relative",
-                }}
-              ></div>
+              {width > 450 ? (
+                <>
+                  <div
+                    className="__nlogoimg"
+                    style={{
+                      background: `url(${mePhoto}) center center / cover`,
+                      position: "relative",
+                    }}
+                  ></div>
 
-              <div className="w-100" style={{ padding: "15px" }}>
-                {width > 450 ? (
-                  <p>
-                    <b>TJIPTO</b> <b>STEVEN SENJAYA</b>
-                    <br />
-                    <small>Web Developer & UI/UX Designer</small>
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
+                  <div className="w-100" style={{ padding: "15px" }}>
+                    <p>
+                      <b>TJIPTO</b> <b>STEVEN SENJAYA</b>
+                      <br />
+                      <small>Web Developer & UI/UX Designer</small>
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div
+                    style={{
+                      background: `url(${logo}) center center / cover`,
+                      height: "150px",
+                      width: "50px",
+                    }}
+                  ></div>
+                  {/* <img src={logo} width="100%" alt="Tjip Dev Work Logo" /> */}
+                </>
+              )}
             </Link>
             {/* <div className="w-100" style={{ height: "50px" }}></div> */}
           </div>
-          {/* <div
-            style={{
-              position: "absolute",
-              left: "-30px",
-              top: "0",
-              fontSize: "100px",
-              fontWeight: "900",
-              textOverflow: "clip",
-              width: "inherit",
-              rotate: "-30deg",
-            }}
-          >
-            TJIPTO
-          </div> */}
         </div>
 
         <div className="__nlinkcontainer">
@@ -64,28 +62,28 @@ const Navbar = () => {
           <div className="__nlink">
             <div className="__nlinkitem">
               <i className="bi bi-house"></i>
-              {width > 450 ? " HOME" : ""}
+              HOME
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
               <i className="bi bi-person"></i>
-              {width > 450 ? " ABOUT" : ""}
+              ABOUT
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
               <i className="bi bi-code-square"></i>
-              {width > 450 ? " WORK" : ""}
+              WORK
             </div>
           </div>
           <hr />
           <div className="__nlink">
             <div className="__nlinkitem">
               <i className="bi bi-chat-square-text"></i>
-              {width > 450 ? " CONTACT" : ""}
+              CONTACT
             </div>
           </div>
           <hr />
