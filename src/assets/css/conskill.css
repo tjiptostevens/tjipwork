@@ -1,0 +1,19 @@
+.__bannerweb {
+    background: url('https://images.pexels.com/photos/4509131/pexels-photo-4509131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center/cover;
+    transition: all 1s;
+}
+
+.__bannerweb:hover {
+    background: url('https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center/cover;
+    transition: all 1s;
+}
+
+.__bannerui {
+    background: url('https://images.pexels.com/photos/1714340/pexels-photo-1714340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center/cover;
+    transition: all 1s;
+}
+
+.__bannerui:hover {
+    background: url('https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center/cover;
+    transition: all 1s;
+}

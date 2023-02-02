@@ -90,18 +90,31 @@ const Navbar = () => {
         </div>
 
         <div className="__nsocialcontainer">
-          <div className="__nsocial">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/tjiptostevens/"
+            className="__nsocial"
+          >
             <i className="bi bi-instagram"></i>
-          </div>
+          </a>
 
-          <div className="__nsocial">
-            {" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/tjiptostevens"
+            className="__nsocial"
+          >
             <i className="bi bi-linkedin"></i>
-          </div>
-          <div className="__nsocial">
-            {" "}
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/tjiptostevens"
+            className="__nsocial"
+          >
             <i className="bi bi-github"></i>
-          </div>
+          </a>
         </div>
 
         <div
