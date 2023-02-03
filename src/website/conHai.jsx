@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/img/logo512.png";
 import useWindow from "../custom/useWindow";
+import "../assets/css/conhai.css";
 const ConHai = (props) => {
   const { width } = useWindow();
   return (
@@ -12,13 +13,13 @@ const ConHai = (props) => {
       }}
     >
       <div
-        className="col-md-12"
-        style={{
-          padding: "50px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className="__haicontainer"
+        // style={{
+        //   padding: "50px",
+        //   display: "flex",
+        //   justifyContent: "center",
+        //   alignItems: "center",
+        // }}
       >
         <div className="col-md-6">
           <img src={logo} alt="Logo Tjip Work" height="50px" />

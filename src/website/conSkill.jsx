@@ -14,25 +14,22 @@ const ConSkill = (props) => {
             alignItems: "center",
           }}
         >
-          <div
-            className="col-md-12"
-            style={{
-              padding: "50px",
-            }}
-          >
+          <div className="__skillcontainer">
             <div className="w-100">My Skill set</div>
             <div className="w-100" style={{ height: "50px" }}></div>
             <div
-              className="col-md-12"
+              className="col-md-12 col-12"
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
+                overflowX: "auto",
+                overflowY: "none",
               }}
             >
               <div
-                className="col-md-3"
+                className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
               >
                 <div
@@ -43,7 +40,7 @@ const ConSkill = (props) => {
                     className="__bannerweb w-100"
                     style={{
                       width: "100%",
-                      minHeight: "45vh",
+                      minHeight: "40vh",
                     }}
                   ></div>
                   <div className="w-100" style={{ padding: "15px" }}>
@@ -52,7 +49,7 @@ const ConSkill = (props) => {
                 </div>
               </div>
               <div
-                className="col-md-3"
+                className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
               >
                 <div
@@ -63,7 +60,7 @@ const ConSkill = (props) => {
                     className="__bannerui w-100"
                     style={{
                       width: "100%",
-                      minHeight: "45vh",
+                      minHeight: "40vh",
                     }}
                   ></div>
                   <div className="w-100" style={{ padding: "15px" }}>
@@ -72,7 +69,7 @@ const ConSkill = (props) => {
                 </div>
               </div>
               <div
-                className="col-md-3"
+                className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
               >
                 <div
@@ -83,7 +80,7 @@ const ConSkill = (props) => {
                     className="w-100"
                     style={{
                       width: "100%",
-                      minHeight: "45vh",
+                      minHeight: "40vh",
                       background: "url() center center/cover",
                     }}
                   ></div>
@@ -93,7 +90,7 @@ const ConSkill = (props) => {
                 </div>
               </div>
               <div
-                className="col-md-3"
+                className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
               >
                 <div
@@ -104,7 +101,7 @@ const ConSkill = (props) => {
                     className="w-100"
                     style={{
                       width: "100%",
-                      minHeight: "45vh",
+                      minHeight: "40vh",
                       background: "url() center center/cover",
                     }}
                   ></div>
