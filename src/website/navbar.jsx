@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useWindow from "../custom/useWindow";
 import mePhoto from "../assets/img/me.jpg";
 import logo from "../assets/img/logo512.png";
@@ -59,33 +59,53 @@ const Navbar = () => {
 
         <div className="__nlinkcontainer">
           <hr />
-          <div className="__nlink">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "__nlink_active" : "__nlink"
+            }
+          >
             <div className="__nlinkitem">
               <i className="bi bi-house"></i>
               HOME
             </div>
-          </div>
+          </NavLink>
           <hr />
-          <div className="__nlink">
+          <NavLink
+            to="about"
+            className={({ isActive }) =>
+              isActive ? "__nlink_active" : "__nlink"
+            }
+          >
             <div className="__nlinkitem">
               <i className="bi bi-person"></i>
               ABOUT
             </div>
-          </div>
+          </NavLink>
           <hr />
-          <div className="__nlink">
+          <NavLink
+            to="work"
+            className={({ isActive }) =>
+              isActive ? "__nlink_active" : "__nlink"
+            }
+          >
             <div className="__nlinkitem">
               <i className="bi bi-code-square"></i>
               WORK
             </div>
-          </div>
+          </NavLink>
           <hr />
-          <div className="__nlink">
+          <NavLink
+            to="contact"
+            className={({ isActive }) =>
+              isActive ? "__nlink_active" : "__nlink"
+            }
+          >
             <div className="__nlinkitem">
               <i className="bi bi-chat-square-text"></i>
               CONTACT
             </div>
-          </div>
+          </NavLink>
           <hr />
         </div>
 

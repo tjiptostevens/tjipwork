@@ -27,15 +27,23 @@
         display: block;
         transition: all 1s;
         cursor: pointer;
+        text-decoration: none;
+        color: inherit
     }
     .__nlink:hover {
+        color: inherit;
         background-color: rgb(255, 160, 126);
         transition: all 1s;
     }
-    .__nlink:active {
+    .__nlink_active {
         background-color: coral;
         font-weight: 600;
         /* border-right: solid 7px brown; */
+        width: inherit;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
         transition: all 1s;
     }
     .__nlinkitem {
@@ -130,18 +138,25 @@
         padding: 0 20px;
         cursor: pointer;
         clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+        text-decoration: none;
+        color: inherit
     }
     .__nlink:hover {
+        color: inherit;
         background-color: rgb(255, 160, 126);
         clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
         padding: 0 25px;
         transition: all 1s;
     }
-    .__nlink:active {
+    .__nlink_active {
         background-color: coral;
         font-weight: 600;
-        /* border-right: solid 7px brown; */
+        width: inherit;
+        display: block;
         padding: 0 15px;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
         transition: all 1s;
     }
     .__nlinkitem {

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/img/logo512.png";
 import useWindow from "../custom/useWindow";
 import "../assets/css/conhai.css";
+import { Link } from "react-router-dom";
 const ConHai = (props) => {
   const { width } = useWindow();
   return (
@@ -71,9 +72,11 @@ const ConHai = (props) => {
             </p>
           </div>
           <div className="w-100" style={{ height: "25px" }}></div>
-          <button className="btn btn-primary" style={{ background: "coral" }}>
-            MORE
-          </button>
+          <Link to="about">
+            <button className="btn btn-primary" style={{ background: "coral" }}>
+              MORE
+            </button>
+          </Link>
         </div>
         <div className="col-md-6"></div>
       </div>
