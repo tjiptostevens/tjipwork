@@ -12,7 +12,7 @@
     }
     .__contenttext {
         text-align: justify;
-        height: 60vh;
+        height: 50vh;
         overflow-y: auto;
     }
 }

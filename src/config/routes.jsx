@@ -1,7 +1,9 @@
 import About from "../website/about";
+import Contact from "../website/contact";
 import Content from "../website/content";
 import Home from "../website/home";
 import Login from "../website/login";
+import Work from "../website/work";
 
 const rute = {
   dash: [
@@ -12,7 +14,7 @@ const rute = {
   ],
   web: [
     {
-      path: "/login",
+      path: "login",
       element: <Login />,
     },
     {
@@ -20,15 +22,23 @@ const rute = {
       element: <Content />,
     },
     {
-      path: "/about",
+      path: "about",
       element: <About />,
+    },
+    {
+      path: "work",
+      element: <Work />,
+    },
+    {
+      path: "contact",
+      element: <Contact />,
     },
     // {
     //   path: "/d/*",
     //   element: <Dashboard />,
     // },
     // {
-    //   path: "*",
+    //   path: "/*",
     //   element: <Home />,
     // },
   ],

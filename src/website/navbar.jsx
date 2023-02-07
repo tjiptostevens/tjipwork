@@ -135,6 +135,14 @@ const Navbar = () => {
           >
             <i className="bi bi-github"></i>
           </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.fiverr.com/s2/da5eb53933"
+            className="__nsocial"
+          >
+            <i className="bi bi-5-square"></i>
+          </a>
         </div>
 
         <div
