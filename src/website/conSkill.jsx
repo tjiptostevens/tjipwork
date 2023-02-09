@@ -28,6 +28,7 @@ const ConSkill = (props) => {
                 overflowY: "none",
               }}
             >
+              {/* web development */}
               <div
                 className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
@@ -48,6 +49,7 @@ const ConSkill = (props) => {
                   </div>
                 </div>
               </div>
+              {/* graphic designer */}
               <div
                 className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
@@ -68,6 +70,7 @@ const ConSkill = (props) => {
                   </div>
                 </div>
               </div>
+              {/* music production */}
               <div
                 className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
@@ -89,6 +92,7 @@ const ConSkill = (props) => {
                   </div>
                 </div>
               </div>
+              {/* data analytics */}
               <div
                 className="col-md-3 col-11"
                 style={{ padding: "5px", height: "50vh", display: "block" }}
@@ -106,7 +110,7 @@ const ConSkill = (props) => {
                     }}
                   ></div>
                   <div className="w-100" style={{ padding: "15px" }}>
-                    <p>Web Development</p>
+                    <p>Data Analytics</p>
                   </div>
                 </div>
               </div>
