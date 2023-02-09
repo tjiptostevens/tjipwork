@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/img/logo512.png";
 import useWindow from "../custom/useWindow";
+import "../assets/css/animation.css";
 import "../assets/css/conhai.css";
 import { Link } from "react-router-dom";
 const ConHai = (props) => {
@@ -38,6 +39,7 @@ const ConHai = (props) => {
             >
               TJIPTO
               <div
+                className="jello-horizontal"
                 style={{
                   background: "coral",
                   width: "25px",
