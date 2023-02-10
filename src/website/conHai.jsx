@@ -52,25 +52,17 @@ const ConHai = (props) => {
           </div>
           <div className="__contenttext">
             <p>
-              I am a highly motivated and hard-working individual who is
-              dedicated to achieving success in IT field. My passion for my work
-              drives me to tackle challenges head-on and always strive to do my
-              best. I am an open and honest person who values fairness and
-              integrity in all aspects of my life. With a background in graphic
-              design and a strong foundation in programming languages such as
-              Python, PHP, and JavaScript, I have developed a diverse skill set
-              in my pursuit of becoming a fullstack developer.
+              Do you need an IT expert who can tackle your toughest challenges
+              with ease? Look no further! At TJIP.WORK, we offer professional
+              problem-solving services that can help you achieve your goals and
+              reach your full potential.
             </p>
             <p>
-              I am also someone who values honesty, creativity, and a commitment
-              to continuous learning. My leadership strengths, as identified by
-              the Gallup Cliffton Strength assessment, include futuristic
-              thinking, ideation, focus, learner, and command.
-            </p>
-            <p>
-              My ultimate goal is to utilize my skills, experience, and passion
-              to create innovative solutions and make a meaningful impact in the
-              industry.
+              With a passion for technology and a commitment to delivering
+              outstanding results, our team of experts is dedicated to helping
+              you solve your most pressing IT problems. Whether you're looking
+              to improve your website, streamline your workflow, or tackle a
+              complex technical challenge, we've got you covered.
             </p>
           </div>
           <div className="w-100" style={{ height: "25px" }}></div>
