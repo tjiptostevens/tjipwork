@@ -1,71 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import useWindow from "../custom/useWindow";
+import "../assets/css/contact.css";
 import "../assets/css/animation.css";
 
 const Contact = () => {
   const { width } = useWindow();
-  const handleSubmit = (e) => {
-    console.log(e);
+  const [data, setData] = useState("");
+  const handleChange = (e) => {
+    let nam = e.target.name;
+    let val = e.target.value;
+    setData({ ...data, [nam]: val });
+    console.log(nam, val);
   };
+  const handleSubmit = (e) => {
+    console.log(data);
+    e.preventDefault();
+  };
+
   return (
     <>
       <div
         className="w-100"
-        style={{ display: "flex", height: "100vh", padding: "50px" }}
+        style={{
+          display: "flex",
+          height: "100vh",
+        }}
       >
-        <div
-          className="w-100"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div className="row col-md-12">
-            {/* Title */}
-            <div style={{ lineHeight: "1" }}>
-              <div
-                style={{
-                  fontSize: width > 450 ? "80px" : "40px",
-                  fontWeight: "900",
-                  display: "flex",
-                  flexDirection: "row",
-                }}
-              >
-                CONTACT ME
-                <div
-                  className="jello-horizontal"
-                  style={{
-                    background: "coral",
-                    width: "25px",
-                    height: "25px",
-                    borderRadius: "50%",
-                  }}
-                ></div>
-              </div>
-              <div style={{ fontSize: width > 450 ? "40px" : "20px" }}>
-                For work, problem solving or just to chat.
-              </div>
-              <div className="w-100" style={{ height: "25px" }}></div>
-            </div>
-            <div className="w-100" style={{ height: "25px" }}></div>
-            <div className="col-md-1"></div>
+        <div className="__concontainer">
+          {/* Title */}
+          <div className="__contitle" style={{ lineHeight: "1" }}>
             <div
-              className="col-md-3"
               style={{
-                background: "coral",
-                color: "white",
-                borderRadius: "15px",
-                padding: "25px",
-                lineHeight: "1",
-                position: "relative",
-                overflow: "hidden",
+                fontSize: width > 450 ? "80px" : "50px",
+                fontWeight: "900",
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
+                flexDirection: "row",
               }}
             >
+              CONTACT ME
+              <div
+                className="jello-horizontal"
+                style={{
+                  background: "coral",
+                  width: "25px",
+                  height: "25px",
+                  borderRadius: "50%",
+                }}
+              ></div>
+            </div>
+            <div style={{ fontSize: width > 450 ? "40px" : "25px" }}>
+              For work, problem solving or just to chat.
+            </div>
+            <div className="w-100" style={{ height: "25px" }}></div>
+          </div>
+          <div className="w-100" style={{ height: "25px" }}></div>
+          {/* form */}
+          <div className="__concontent row w-100">
+            <div className="col-md-1"></div>
+            <div className="__coninfocontainer col-md-3">
               <div
                 style={{
                   width: "250px",
@@ -86,7 +78,7 @@ const Contact = () => {
                   position: "absolute",
                   bottom: "100px",
                   right: "60px",
-                  background: "white",
+                  background: "rgba(255,255,255,0.7)",
                 }}
               ></div>
               <div className="w-100">
@@ -156,10 +148,7 @@ const Contact = () => {
 
               {/* Social contact */}
               <div className="w-100">
-                <div
-                  className="__nsocialcontainer"
-                  style={{ justifyContent: "flex-start" }}
-                >
+                <div className="__consocialcontainer">
                   <a
                     style={{ color: "white" }}
                     target="_blank"
@@ -201,59 +190,68 @@ const Contact = () => {
               </div>
             </div>
             <form
-              className="col-md-6"
+              className="__conformcontainer col-md-6"
               onSubmit={handleSubmit}
-              style={{ padding: "15px" }}
             >
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}>
-                  name
-                </div>
+                <div className="col-md-3">name</div>
                 <div className="col-md-9">
-                  <input className="form-control" type="text" name="name" />
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}>
-                  mobile
-                </div>
+                <div className="col-md-3">mobile</div>
                 <div className="col-md-9">
-                  <input className="form-control" type="number" name="mobile" />
+                  <input
+                    className="form-control"
+                    type="number"
+                    name="mobile"
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}>
-                  email
-                </div>
+                <div className="col-md-3">email</div>
                 <div className="col-md-9">
-                  <input className="form-control" type="email" name="email" />
+                  <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}>
-                  type
-                </div>
+                <div className="col-md-3">type</div>
                 <div className="col-md-9">
-                  <select className="form-select" value={"0"}>
-                    <option value="0" disabled="true">
+                  <select
+                    className="form-select"
+                    name="type"
+                    value={data.type}
+                    onChange={handleChange}
+                  >
+                    <option value="-" disabled={true}>
                       message type select
                     </option>
-                    <option value="1">web development</option>
-                    <option value="2">ui/ux design</option>
-                    <option value="3">music production</option>
-                    <option value="4">data analytics</option>
-                    <option value="5">others</option>
+                    <option value="web">web development</option>
+                    <option value="design">ui/ux design</option>
+                    <option value="music">music production</option>
+                    <option value="data">data analytics</option>
+                    <option value="other">others</option>
                   </select>
                 </div>
               </div>
 
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}>
-                  message
-                </div>
+                <div className="col-md-3">message</div>
                 <div className="col-md-9">
                   <textarea
                     className="form-control"
@@ -261,12 +259,13 @@ const Contact = () => {
                     id=""
                     cols="30"
                     rows="10"
+                    onChange={handleChange}
                   ></textarea>
                 </div>
               </div>
 
               <div className="row col-md-12" style={{ padding: "5px" }}>
-                <div className="col-md-3" style={{ textAlign: "right" }}></div>
+                <div className="col-md-3"></div>
                 <div className="col-md-9">
                   <button className="btn btn-primary">
                     <i className="bi bi-cursor"></i> send

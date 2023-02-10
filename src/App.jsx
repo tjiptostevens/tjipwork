@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import routes from "./config/routes";
 import { siteSettings } from "./config/setting";
 import Home from "./website/home";
 import Maintenance from "./website/maintenance";
 import Page404 from "./website/page404";
+import "./App.css";
 
 function App() {
   if (siteSettings.mode === "0") {
