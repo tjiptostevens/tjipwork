@@ -1,26 +1,13 @@
 import React from "react";
 import gantole from "../assets/img/gantole.mp4";
+import "../assets/css/about.css";
 
 const About = () => {
   return (
     <>
       <div className="w-100" style={{ overflowY: "auto", overflowX: "hidden" }}>
         <div className="w-100" style={{ position: "relative" }}>
-          <div
-            className="__conabouthero"
-            style={{
-              height: "90vh",
-              width: "90vw",
-              position: "relative",
-              top: "-75px",
-              overflow: "hidden",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              rotate: "-7deg",
-              borderRadius: "25px",
-            }}
-          >
+          <div className="__conabouthero">
             <div
               style={{
                 padding: "0 25px",
@@ -44,20 +31,7 @@ const About = () => {
               left: "40%",
             }}
           >
-            <div
-              style={{
-                translate: "-50% -50%",
-                color: "coral",
-                background: "rgba(0,0,0,0.7)",
-                fontSize: "40px",
-                fontWeight: "100",
-                padding: "25px 50px",
-                textAlign: "center",
-                whiteSpace: "pre",
-                borderRadius: "5px",
-                lineHeight: "1.25",
-              }}
-            >
+            <div className="__conabouttitle">
               {"Unleash the Power of\nProfessional Problem Solving.".toUpperCase()}
             </div>
           </div>
@@ -134,6 +108,7 @@ const About = () => {
             </div>
           </div>
           <div className="row col-md-12" style={{ padding: "50px 0" }}>
+            <div className="col-md-2"></div>
             <div
               className="col-md-6"
               style={{ padding: "50px", textAlign: "justify" }}
@@ -142,7 +117,16 @@ const About = () => {
               Contact us today and discover the power of professional problem
               solving with TJIP.WORK."
             </div>
-            <div className="col-md-6"></div>
+            <div
+              className="col-md-4"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button className="btn btn-primary">CONTACT NOW</button>
+            </div>
           </div>
         </div>
       </div>
