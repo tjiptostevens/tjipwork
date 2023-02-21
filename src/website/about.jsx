@@ -1,6 +1,7 @@
 import React from "react";
 import gantole from "../assets/img/gantole.mp4";
 import "../assets/css/about.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -58,6 +59,7 @@ const About = () => {
                 color: "coral",
               }}
               target="_blank"
+              rel="noreferrer"
               href="https://www.pexels.com/video/an-aerial-view-of-hang-gliding-6807323/"
             >
               Video by Cédric Estienne
@@ -125,7 +127,14 @@ const About = () => {
                 alignItems: "center",
               }}
             >
-              <button className="btn btn-primary">CONTACT NOW</button>
+              <Link to="/contact">
+                <button
+                  className="btn btn-primary"
+                  style={{ background: "coral" }}
+                >
+                  CONTACT NOW
+                </button>
+              </Link>
             </div>
           </div>
         </div>

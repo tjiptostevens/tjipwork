@@ -14,15 +14,7 @@ const ConHai = (props) => {
         height: "100vh",
       }}
     >
-      <div
-        className="__haicontainer"
-        // style={{
-        //   padding: "50px",
-        //   display: "flex",
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        // }}
-      >
+      <div className="__haicontainer">
         <div className="col-md-6">
           <img src={logo} alt="Logo Tjip Work" height="50px" />
           <div style={{ lineHeight: "1" }}>
@@ -38,15 +30,17 @@ const ConHai = (props) => {
               }}
             >
               TJIPTO
-              <div
-                className="jello-horizontal"
-                style={{
-                  background: "coral",
-                  width: "25px",
-                  height: "25px",
-                  borderRadius: "50%",
-                }}
-              ></div>
+              <div className="shake-flying">
+                <div
+                  className="jello-horizontal"
+                  style={{
+                    background: "coral",
+                    width: "25px",
+                    height: "25px",
+                    borderRadius: "50%",
+                  }}
+                ></div>
+              </div>
             </div>
             <div className="w-100" style={{ height: "25px" }}></div>
           </div>

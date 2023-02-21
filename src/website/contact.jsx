@@ -59,6 +59,7 @@ const Contact = () => {
             <div className="col-md-1"></div>
             <div className="__coninfocontainer col-md-3">
               <div
+                className="shake-flying"
                 style={{
                   width: "250px",
                   height: "250px",
@@ -71,6 +72,7 @@ const Contact = () => {
                 }}
               ></div>
               <div
+                className="shake-flying"
                 style={{
                   width: "50px",
                   height: "50px",
@@ -79,6 +81,7 @@ const Contact = () => {
                   bottom: "100px",
                   right: "60px",
                   background: "rgba(255,255,255,0.7)",
+                  rotate: "60deg",
                 }}
               ></div>
               <div className="w-100">
@@ -105,45 +108,69 @@ const Contact = () => {
 
               {/* Other Contact */}
               <div className="w-100" style={{ padding: "15px" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "flex-start",
-                  }}
+                <a
+                  href="tel:+6287832340390"
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  <i className="bi bi-phone" style={{ marginRight: "7px" }}></i>{" "}
-                  <p> +62 878 3234 0390</p>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "flex-start",
-                  }}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <i
+                      className="bi bi-phone"
+                      style={{ marginRight: "7px" }}
+                    ></i>{" "}
+                    <p> +62 878 3234 0390</p>
+                  </div>
+                </a>
+                <a
+                  href="mailto:tjip@tjip.work"
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  <i
-                    className="bi bi-mailbox"
-                    style={{ marginRight: "7px" }}
-                  ></i>
-                  <p>tjip@tjip.work</p>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "flex-start",
-                  }}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <i
+                      className="bi bi-mailbox"
+                      style={{ marginRight: "7px" }}
+                    ></i>
+                    <p>tjip@tjip.work</p>
+                  </div>
+                </a>
+                <a
+                  href="https://goo.gl/maps/YquPscmxNH67CbrZ9"
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  <i
-                    className="bi bi-geo-alt"
-                    style={{ marginRight: "7px" }}
-                  ></i>
-                  <p>
-                    Jl Taman Pedurungan Tengah I, <br /> Semarang, JT -
-                    Indonesia
-                  </p>
-                </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <i
+                      className="bi bi-geo-alt"
+                      style={{ marginRight: "7px" }}
+                    ></i>
+                    <p>
+                      Jl Taman Pedurungan Tengah I, <br /> Semarang, JT -
+                      Indonesia
+                    </p>
+                  </div>
+                </a>
               </div>
 
               {/* Social contact */}
