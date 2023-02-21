@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "../assets/css/work.css";
 import useWindow from "../custom/useWindow";
+import Modal from "../website/modal";
 
 const Work = () => {
   const { width } = useWindow();
   const [cat, setCat] = useState("web development");
+  const [vis, setVis] = useState({ modal: false });
   const handleCategory = (e, category) => {
     e.preventDefault();
     setCat(category);
@@ -98,6 +100,12 @@ const Work = () => {
   ];
   return (
     <>
+      <Modal
+        modal={vis.modal}
+        title={vis.title}
+        element={vis.body}
+        handleClose={() => setVis({ modal: false })}
+      />
       <div
         className="w-100"
         style={{

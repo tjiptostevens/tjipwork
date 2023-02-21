@@ -1,41 +1,47 @@
 import React from "react";
-import "../assets/css/modal.css";
 
-const Modal = () => {
+const Modal = (props) => {
+  const handleClose = (e) => {
+    // console.log(props);
+    props.handleClose();
+  };
   return (
     <>
-      <div className="__modalcontainer">
-        <div className="__modalwindow">
-          <div className="__modaltitle">
-            <div>TITLE</div>
-            <div>x</div>
-          </div>
-          <div className="__modalcameracontainer">
-            <div className="__modalcamera"></div>
-            <div className="__modaladdbg">+ ADD BACKGROUND</div>
-          </div>
-          <div className="__modalfxcontainer">
-            {[...Array(10)].map((e, i) => {
-              i += 1;
-              return (
-                <div
-                  key={i}
-                  className="__modalfx"
-                  style={{
-                    backgroundColor: `rgb(${[...Array(3)].map(
-                      (e, i) => Math.random() * (250 - 0) + 0
-                    )}`,
-                  }}
-                ></div>
-              );
-            })}
-          </div>
-          <div className="__modalend">
-            <button className="__modalbtn __btncancel">CANCEL</button>
-            <button className="__modalbtn __btnapply">APPLY</button>
+      {props.modal ? (
+        <div className="modal-window">
+          <div className="col-11 col-md-6" style={{ borderRadius: "5px" }}>
+            <div className="modal-title" style={{ display: "flex" }}>
+              <div style={{ margin: "0", padding: "0" }}>
+                <h1>{props.title}</h1>
+              </div>
+              <div style={{ cursor: "pointer" }} onClick={handleClose}>
+                <i
+                  className="bi bi-x-square"
+                  onMouseEnter={(e) =>
+                    (e.target.className = "bi bi-x-square-fill")
+                  }
+                  onMouseLeave={(e) => (e.target.className = "bi bi-x-square")}
+                  style={{ cursor: "pointer" }}
+                ></i>
+              </div>
+            </div>
+            <hr />
+            <div
+              className="w-100 justify-content-around"
+              style={{
+                textAlign: "justify",
+                height: "auto",
+                maxHeight: "80vh",
+                overflowY: "auto",
+              }}
+            >
+              <div>{props.element}</div>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };
