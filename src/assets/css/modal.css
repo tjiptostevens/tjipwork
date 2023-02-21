@@ -1,0 +1,82 @@
+.__modalcontainer,
+.__modalcameracontainer,
+.__modalcamera,
+.__modalfxcontainer,
+.__modalend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.__modalwindow {
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    padding: 25px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.__modalcameracontainer {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 0
+}
+
+.__modaladdbg {
+    padding: 15px 0
+}
+
+.__modalcamera {
+    height: 20vw;
+    background-color: beige;
+    border-radius: 7px;
+}
+
+.__modaltitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.__modalfxcontainer {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.__modalfx {
+    width: 19%;
+    height: 80px;
+    background-color: beige;
+    border-radius: 7px;
+    margin: 3px 0
+}
+
+.__modalend {
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 15px;
+}
+
+.__modalbtn {
+    padding: 7px 14px;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+}
+
+.__btncancel {
+    background-color: grey;
+}
+
+.__btnapply {
+    background-color: royalblue;
+}

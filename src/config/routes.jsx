@@ -3,6 +3,7 @@ import Contact from "../website/contact";
 import Content from "../website/content";
 import Home from "../website/home";
 import Login from "../website/login";
+import Modal from "../website/modal";
 import Work from "../website/work";
 
 const rute = {
@@ -32,6 +33,10 @@ const rute = {
     {
       path: "contact",
       element: <Contact />,
+    },
+    {
+      path: "modal",
+      element: <Modal />,
     },
     // {
     //   path: "/d/*",
