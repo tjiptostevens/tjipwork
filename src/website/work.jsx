@@ -14,6 +14,33 @@ const Work = () => {
   };
   const handleProjectItem = (e, data) => {
     e.preventDefault();
+    setVis({
+      modal: true,
+      title: "PROJECT DETAIL",
+      body: (
+        <>
+          <div
+            className="w-100"
+            style={{
+              height: "30vh",
+              width: "100%",
+              borderRadius: "5px",
+              background: `url(${data.banner}?random=${Math.floor(
+                Math.random() * 100
+              )}) center center/cover`,
+            }}
+          ></div>
+          <div className="w-100">
+            <p style={{ lineHeight: "1.2" }}>
+              <b style={{ color: "coral" }}>{data.title.toUpperCase()}</b>
+              <br />
+              <small style={{ color: "grey" }}>{data.subtitle}</small>
+            </p>
+            <p style={{ color: "rgb(100, 100, 100)" }}>{data.description}</p>
+          </div>
+        </>
+      ),
+    });
     console.log(data);
   };
   const category = [
@@ -32,6 +59,7 @@ const Work = () => {
     {
       id: "1",
       category: "web development",
+      banner: "https://picsum.photos/600/600",
       title: "Pitara Mulia",
       subtitle: "Simple Accounting App Project",
       description:
@@ -41,6 +69,7 @@ const Work = () => {
     {
       id: "2",
       category: "web development",
+      banner: "https://picsum.photos/600/600",
       title: "Pitara Mulia",
       subtitle: "Simple Accounting App Project",
       description:
@@ -50,6 +79,7 @@ const Work = () => {
     {
       id: "3",
       category: "web development",
+      banner: "https://picsum.photos/600/600",
       title: "Pitara Mulia",
       subtitle: "Simple Accounting App Project",
       description:
@@ -59,6 +89,7 @@ const Work = () => {
     {
       id: "4",
       category: "web development",
+      banner: "https://picsum.photos/600/600",
       title: "Pitara Mulia",
       subtitle: "Simple Accounting App Project",
       description:
@@ -68,6 +99,7 @@ const Work = () => {
     {
       id: "5",
       category: "music",
+      banner: "https://picsum.photos/600/600",
       title: "Music 1",
       subtitle: "Simple Music",
       description:
@@ -77,6 +109,7 @@ const Work = () => {
     {
       id: "6",
       category: "music",
+      banner: "https://picsum.photos/600/600",
       title: "Music 2",
       subtitle: "Simple Music",
       description:
@@ -86,6 +119,7 @@ const Work = () => {
     {
       id: "7",
       category: "music",
+      banner: "https://picsum.photos/600/600",
       title: "Music 3",
       subtitle: "Simple Music",
       description:
@@ -95,6 +129,7 @@ const Work = () => {
     {
       id: "8",
       category: "music",
+      banner: "https://picsum.photos/600/600",
       title: "Music 4",
       subtitle: "Simple Music",
       description:

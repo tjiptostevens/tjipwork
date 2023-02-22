@@ -5,6 +5,7 @@ import Home from "./website/home";
 import Maintenance from "./website/maintenance";
 import Page404 from "./website/page404";
 import "./App.css";
+import "./assets/css/modal.css";
 
 function App() {
   if (siteSettings.mode === "0") {
