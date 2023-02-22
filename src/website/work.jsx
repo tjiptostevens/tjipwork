@@ -38,6 +38,18 @@ const Work = () => {
             </p>
             <p style={{ color: "rgb(100, 100, 100)" }}>{data.description}</p>
           </div>
+          <div
+            className="w-100"
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+            }}
+          >
+            {data.tag.map((t) => (
+              <span className="__tag">{t}</span>
+            ))}
+          </div>
         </>
       ),
     });
