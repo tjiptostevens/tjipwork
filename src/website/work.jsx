@@ -10,6 +10,10 @@ const Work = () => {
     setCat(category);
     console.log(category);
   };
+  const handleProjectItem = (e, data) => {
+    e.preventDefault();
+    console.log(data);
+  };
   const category = [
     {
       id: "1",
@@ -184,13 +188,8 @@ const Work = () => {
                       .map((d) => (
                         <>
                           <div
-                            style={{
-                              background: "#e9e9e9",
-                              borderRadius: "5px",
-                              padding: "15px",
-                              lineHeight: "1",
-                              position: "relative",
-                            }}
+                            className="__workprojectitem"
+                            onClick={(e) => handleProjectItem(e, d)}
                           >
                             <div
                               // className="jello-horizontal"
