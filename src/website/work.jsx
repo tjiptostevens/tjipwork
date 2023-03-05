@@ -15,7 +15,7 @@ const Work = () => {
   const handleProjectItem = (e, data) => {
     e.preventDefault();
     setVis({
-      modal: true,
+      modal: width > 450 ? false : true,
       title: "PROJECT DETAIL",
       body: (
         <>
@@ -294,7 +294,10 @@ const Work = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div
+              className="col-md-6"
+              style={{ display: width > 450 ? "" : "none" }}
+            >
               <div
                 style={{
                   padding: "7px 0",
@@ -306,8 +309,36 @@ const Work = () => {
                     background: "#e9e9e9",
                     borderRadius: "5px",
                     height: "100%",
+                    overflow: "auto",
                   }}
-                ></div>
+                >
+                  <div className="w-100" style={{ padding: "15px" }}>
+                    <div>
+                      {vis.body ? (
+                        vis.body
+                      ) : (
+                        <>
+                          <div
+                            style={{
+                              color: "grey",
+                              overflow: "hidden",
+                              display: "flex",
+                              flexDirection: "row",
+                            }}
+                          >
+                            <div
+                              className="jello-horizontal"
+                              style={{ marginRight: "15px" }}
+                            >
+                              <i className="bi bi-chevron-left"></i>
+                            </div>
+                            Klik the project to see the Detail Here.
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
